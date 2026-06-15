@@ -16,3 +16,6 @@
 icons/_preview.html
 photos/*.html
 !index.html
+
+# testimonial headshots
+!testi_*.jpg
