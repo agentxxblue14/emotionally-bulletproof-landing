@@ -1,0 +1,17 @@
+# Allowlist approach: ignore EVERYTHING in this client folder by default
+# (timesheets, invoices, reply drafts, scripts, PDFs, etc. must never be committed),
+# then explicitly un-ignore only the landing page and its image/icon assets.
+*
+
+# --- allowed: the landing page deliverable + its assets ---
+!.gitignore
+!README.md
+!Emotionally Bulletproof - Landing Page V1.html
+!photos/
+!photos/**
+!icons/
+!icons/**
+
+# never publish the icon-preview scratch pages
+icons/_preview.html
+photos/*.html
