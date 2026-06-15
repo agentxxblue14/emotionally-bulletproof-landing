@@ -1,0 +1,596 @@
+<!-- Emotionally Bulletproof - Landing Page V1  |  for Hridaya Breathwork
+     Paste this whole block into one Squarespace Code Block.
+     Before publishing: replace ACUITY_AUDIT_CALL_URL with your Clarity Call booking link. -->
+<div id="eb">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+    #eb { --blue:#2c5f7c; --blue-deep:#1d4459; --blue-soft:#eaf1f5; --ink:#23323b; --muted:#5d6e78; --gold:#c9a86a; --line:#dde6ea;
+          font-family:'Inter',-apple-system,sans-serif; color:var(--ink); line-height:1.65; font-weight:300; -webkit-font-smoothing:antialiased; }
+    #eb * { box-sizing:border-box; }
+    #eb h1,#eb h2,#eb h3,#eb h4 { font-family:'Cormorant Garamond',Georgia,serif; font-weight:500; line-height:1.15; color:var(--blue-deep); margin:0 0 .4em; }
+    #eb p { margin:0 0 1.1em; }
+    #eb .eb-wrap { max-width:1080px; margin:0 auto; padding:0 24px; position:relative; z-index:1; }
+    #eb .eb-narrow { max-width:760px; margin:0 auto; padding:0 24px; position:relative; z-index:1; }
+    #eb .eb-eyebrow { font-family:'Inter',sans-serif; font-weight:500; letter-spacing:.18em; text-transform:uppercase; font-size:.72rem; color:var(--gold); margin:0 0 1.2em; }
+    #eb .eb-btn { display:inline-block; background:var(--blue); color:#fff !important; text-decoration:none; font-family:'Inter',sans-serif; font-weight:500; letter-spacing:.04em; font-size:.92rem; padding:16px 38px; border-radius:40px; transition:background .2s,transform .2s; }
+    #eb .eb-btn:hover { background:var(--blue-deep); transform:translateY(-2px); }
+    #eb section { padding:88px 0; position:relative; overflow:hidden; }
+    #eb h2 { font-size:clamp(2rem,4vw,2.9rem); text-align:center; }
+    #eb .eb-lead { text-align:center; font-size:1.15rem; color:var(--muted); max-width:640px; margin:0 auto 2.4em; }
+    #eb .eb-soft { background:var(--blue-soft); }
+    #eb .eb-deep { background:var(--blue-deep); }
+
+    /* the method - Venn diagram */
+    #eb .eb-method { background:radial-gradient(circle at 50% 30%, #25506a, var(--blue-deep) 70%); }
+    #eb .eb-method h2,#eb .eb-method h3{ color:#fff; }
+    #eb .eb-method .eb-eyebrow{ text-align:center; }
+    #eb .eb-method .eb-lead{ color:#cfe0ea; }
+    #eb .eb-venn { display:block; width:min(440px,84%); height:auto; margin:44px auto 0; overflow:visible; }
+    #eb .eb-venn circle { fill:rgba(231,211,168,.08); stroke:var(--gold); stroke-width:1.4; transition:fill .4s; }
+    #eb .eb-venn:hover circle { fill:rgba(231,211,168,.13); }
+    #eb .eb-venn .vlabel { fill:#fff; font-family:'Cormorant Garamond',serif; font-size:27px; }
+    #eb .eb-venn .vkick { fill:var(--gold); font-family:'Inter',sans-serif; font-size:10.5px; letter-spacing:1.6px; text-transform:uppercase; }
+    #eb .eb-venn .vcenter { fill:#e7d3a8; font-family:'Inter',sans-serif; font-size:11px; font-weight:600; letter-spacing:2.4px; }
+    #eb .eb-venn-legend { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; max-width:880px; margin:40px auto 0; }
+    #eb .eb-venn-legend > div { text-align:center; }
+    #eb .eb-venn-legend .eb-kicker { font-family:'Inter',sans-serif; font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:.72rem; color:var(--gold); display:block; margin-bottom:.7em; }
+    #eb .eb-venn-legend p { color:#d3e2ec; font-size:1rem; margin:0; line-height:1.6; }
+    #eb .eb-triad-note { text-align:center; margin-top:44px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.5rem; color:#fff; }
+    #eb .eb-deep h2,#eb .eb-deep h3,#eb .eb-deep h4 { color:#fff; }
+    #eb .eb-deep p,#eb .eb-deep li { color:#dbe7ee; }
+
+    /* subtle background icons */
+    #eb .eb-icon-bg { position:absolute; z-index:0; pointer-events:none; user-select:none; }
+
+    /* lists */
+    #eb .eb-list { list-style:none; padding:0; margin:0; }
+    #eb .eb-list li { position:relative; padding:11px 0 11px 38px; border-bottom:1px solid var(--line); font-size:1.04rem; }
+    #eb .eb-list li:last-child { border-bottom:none; }
+    #eb .eb-list li:before { content:'\2014'; position:absolute; left:0; color:var(--gold); font-weight:600; }
+    #eb .eb-check li:before { content:'\2713'; color:var(--blue); font-weight:700; }
+    #eb .eb-arrow li:before { content:'\279C'; color:var(--gold); }
+    #eb .eb-deep .eb-list li { border-bottom-color:rgba(255,255,255,.15); }
+
+    /* two-column photo sections — photo on one side, text on the other */
+    #eb .eb-split { display:grid; grid-template-columns:5fr 7fr; gap:56px; align-items:center; }
+    #eb .eb-split.eb-flip { grid-template-columns:7fr 5fr; }
+    #eb .eb-split img { width:100%; border-radius:14px; display:block; }
+    #eb .eb-split h2, #eb .eb-split h3 { text-align:left; }
+    /* a split that leads with the photo on a soft band */
+    #eb .eb-split-tall { align-items:start; }
+    #eb .eb-split-tall img { position:sticky; top:24px; }
+
+    /* numbered inclusions */
+    #eb .eb-incl { display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:48px; }
+    #eb .eb-incl-item { background:#fff; border:1px solid var(--line); border-radius:14px; padding:30px 28px; display:flex; gap:22px; align-items:flex-start; }
+    #eb .eb-incl-item .eb-num { font-family:'Cormorant Garamond',serif; font-size:2.2rem; color:var(--gold); line-height:1; min-width:54px; }
+    #eb .eb-incl-item p { margin:0; font-size:1rem; }
+    #eb .eb-incl-item strong { color:var(--blue-deep); }
+
+    /* steps */
+    #eb .eb-steps { display:grid; grid-template-columns:1fr 1fr; gap:32px; max-width:880px; margin:40px auto 0; }
+    #eb .eb-step { background:#fff; border:1px solid var(--line); border-radius:14px; padding:38px 32px; text-align:center; }
+    #eb .eb-step .eb-stepnum { font-family:'Cormorant Garamond',serif; font-size:1rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:.6em; }
+
+    /* offer card */
+    #eb .eb-offer-card { background:#fff; border:1px solid var(--line); border-radius:18px; max-width:560px; margin:32px auto 0; padding:48px 40px; text-align:center; box-shadow:0 30px 60px -30px rgba(29,68,89,.35); position:relative; z-index:1; }
+    #eb .eb-value { font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--blue-deep); margin-bottom:.4em; }
+    #eb .eb-price-row { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; margin:8px 0 28px; }
+    #eb .eb-price { flex:1 1 200px; border:1px solid var(--line); border-radius:14px; padding:24px 18px; }
+    #eb .eb-price .eb-now { font-family:'Cormorant Garamond',serif; font-size:2.6rem; color:var(--blue-deep); line-height:1.1; }
+    #eb .eb-price .eb-sub { font-size:.85rem; color:var(--muted); }
+    #eb .eb-fine { font-size:.9rem; color:var(--muted); margin-top:18px; }
+
+    /* testimonial */
+    #eb .eb-quote { max-width:720px; margin:0 auto; text-align:center; position:relative; z-index:1; }
+    #eb .eb-ph { background:#fff; border:1px dashed var(--gold); border-radius:12px; padding:30px; color:var(--muted); font-style:italic; }
+    #eb .eb-testi-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:980px; margin:0 auto; }
+    #eb .eb-testi-card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:34px 32px; text-align:left; display:flex; flex-direction:column; gap:22px; box-shadow:0 20px 40px -30px rgba(29,68,89,.3); }
+    #eb .eb-testi-card blockquote { margin:0; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.3rem; line-height:1.5; color:var(--blue-deep); }
+    #eb .eb-testi-card blockquote:before { content:'\201C'; color:var(--gold); font-size:1.5em; line-height:0; vertical-align:-.35em; margin-right:.04em; }
+    #eb .eb-testi-card figcaption { display:flex; align-items:center; gap:14px; margin-top:auto; }
+    #eb .eb-testi-card figcaption img { width:54px; height:54px; border-radius:50%; object-fit:cover; flex:none; }
+    #eb .eb-testi-name { font-family:'Inter',sans-serif; font-weight:600; color:var(--blue-deep); font-size:.98rem; }
+    #eb .eb-testi-role { font-size:.84rem; color:var(--muted); }
+    #eb .eb-testi-card:last-child:nth-child(odd) { grid-column:1 / -1; max-width:480px; margin:0 auto; }
+
+    /* FAQ accordion (dropdowns) */
+    #eb .eb-faq { max-width:760px; margin:40px auto 0; }
+    #eb .eb-faq details { border-bottom:1px solid var(--line); }
+    #eb .eb-faq summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:22px 4px; font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:var(--blue-deep); }
+    #eb .eb-faq summary::-webkit-details-marker { display:none; }
+    #eb .eb-faq summary:after { content:'+'; font-family:'Inter',sans-serif; font-weight:300; font-size:1.5rem; color:var(--gold); transition:transform .2s; }
+    #eb .eb-faq details[open] summary:after { transform:rotate(45deg); }
+    #eb .eb-faq .eb-faq-a { padding:0 4px 24px; color:var(--muted); font-size:1rem; }
+
+    /* photo carousel */
+    #eb .eb-carousel { overflow:hidden; padding:0; }
+    #eb .eb-track { display:flex; gap:18px; width:max-content; animation:eb-scroll 40s linear infinite; }
+    #eb .eb-track img { height:260px; width:auto; border-radius:12px; display:block; }
+    @keyframes eb-scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+    @media(max-width:820px){
+      #eb section{padding:60px 0;}
+      #eb .eb-split, #eb .eb-split.eb-flip { grid-template-columns:1fr; gap:32px; }
+      #eb .eb-split-tall img{ position:static; }
+      #eb .eb-incl{grid-template-columns:1fr;}
+      #eb .eb-steps{grid-template-columns:1fr;}
+      #eb .eb-track img{height:180px;}
+      #eb .eb-testi-grid{grid-template-columns:1fr;}
+      #eb .eb-venn-legend{grid-template-columns:1fr; gap:32px; max-width:380px;}
+      #eb .eb-icon-bg{opacity:.6;}
+    }
+
+    /* ===== scroll-reveal + entrance animations (progressive enhancement; classes added by JS only) ===== */
+    #eb .eb-reveal { opacity:0; transform:translateY(28px); transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1); will-change:opacity, transform; }
+    #eb .eb-reveal.eb-in { opacity:1; transform:none; }
+    #eb .eb-reveal-img { clip-path:inset(0 0 12% 0); }
+    #eb .eb-reveal-img.eb-in { clip-path:inset(0 0 0 0); transition:clip-path .9s cubic-bezier(.22,.61,.36,1), opacity .7s ease, transform .7s ease; }
+    #eb .eb-btn { transition:background .25s, transform .25s, box-shadow .25s; }
+    #eb .eb-btn:hover { box-shadow:0 14px 30px -12px rgba(29,68,89,.6); }
+    #eb .eb-split img { transition:transform .6s cubic-bezier(.22,.61,.36,1); }
+    #eb .eb-split:hover img { transform:scale(1.02); }
+    #eb .eb-testi-card { transition:transform .35s, box-shadow .35s; }
+    #eb .eb-testi-card:hover { transform:translateY(-6px); box-shadow:0 30px 55px -28px rgba(29,68,89,.45); }
+    #eb .eb-incl-item, #eb .eb-step { transition:transform .35s, box-shadow .35s, border-color .35s; }
+    #eb .eb-incl-item:hover, #eb .eb-step:hover { transform:translateY(-6px); box-shadow:0 26px 50px -30px rgba(29,68,89,.4); border-color:var(--gold); }
+    @media (prefers-reduced-motion: reduce){
+      #eb .eb-reveal, #eb .eb-reveal-img { opacity:1 !important; transform:none !important; clip-path:none !important; transition:none !important; }
+    }
+
+    /* reusable "subtitle" size — a touch larger than body, for the lines Hridaya wants emphasised */
+    #eb .eb-subtitle { font-size:1.3rem; line-height:1.55; }
+    #eb .eb-subtitle-i { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-style:italic; line-height:1.4; color:var(--blue-deep); }
+
+    /* background icons centred over the text (rather than tucked in a corner) to draw the eye to the words */
+    #eb .eb-icon-center { left:50%; top:50%; transform:translate(-50%,-50%); opacity:.10; }
+
+    /* THE ELEMENTS — circular badges using the same gold-ringed look as the Method circles */
+    #eb .eb-elements { display:grid; grid-template-columns:repeat(3,1fr); gap:46px 36px; max-width:980px; margin:54px auto 0; }
+    #eb .eb-element { text-align:center; }
+    #eb .eb-element .eb-circle { width:150px; height:150px; border-radius:50%; border:1.4px solid var(--gold); background:rgba(201,168,106,.08); display:flex; align-items:center; justify-content:center; padding:18px; margin:0 auto 22px; transition:background .4s, transform .35s; }
+    #eb .eb-element:hover .eb-circle { background:rgba(201,168,106,.16); transform:translateY(-4px); }
+    #eb .eb-element .eb-circle span { font-family:'Cormorant Garamond',serif; font-size:1.35rem; line-height:1.1; color:var(--blue-deep); }
+    #eb .eb-element p { font-size:1rem; color:var(--muted); margin:0; line-height:1.55; }
+
+    /* 7 Belts graphic / placeholder */
+    #eb .eb-graphic { display:block; width:min(760px,100%); height:auto; margin:40px auto 0; border-radius:14px; }
+    #eb .eb-graphic-ph { max-width:760px; margin:40px auto 0; border:1px dashed var(--gold); border-radius:14px; padding:48px 30px; text-align:center; color:var(--muted); font-style:italic; background:#fff; }
+
+    /* FAQ icon on the LEFT of each question, touching the text */
+    #eb .eb-faq summary { padding-left:46px; background-image:url('icons/hands_sunburst_gold_subtle.png'); background-repeat:no-repeat; background-position:left 2px center; background-size:30px 30px; }
+
+    @media(max-width:820px){
+      #eb .eb-elements { grid-template-columns:1fr 1fr; gap:36px 24px; max-width:420px; }
+    }
+  </style>
+
+  <section class="eb-hero" style="min-height:88vh; display:flex; align-items:center; text-align:center; background:linear-gradient(rgba(29,68,89,.42),rgba(29,68,89,.6)), radial-gradient(ellipse 70% 55% at 50% 45%, rgba(0,0,0,.28), transparent 70%), url('photos/hero.png') center 35%/cover no-repeat;">
+    <div class="eb-wrap">
+      <p class="eb-eyebrow" style="color:#e7d3a8; font-size:.92rem; letter-spacing:.14em;">Because your emotions were never meant to be suppressed&mdash;they were meant to be recruited</p>
+      <h1 style="color:#fff; font-size:clamp(2.6rem,6vw,4.6rem); margin-bottom:.3em;">Emotionally Bulletproof</h1>
+      <p style="color:#f3f7f9; font-size:clamp(1.2rem,2.3vw,1.5rem); max-width:700px; margin:0 auto 2em;">A 9-week 1:1 online program to master your emotional world, build unshakable resilience, and turn your emotions into a source of power, purpose, and momentum.</p>
+      <a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Begin the Journey</a>
+    </div>
+  </section>
+
+  <section>
+    <img class="eb-icon-bg eb-icon-center" src="icons/hands_sunburst_blue_subtle.png" alt="" style="width:480px;">
+    <div class="eb-wrap">
+      <div class="eb-split">
+        <img src="photos/photo1.jpg" alt="Hridaya">
+        <div>
+          <h2>This is for the woman who is done with emotional compromise</h2>
+          <p>You want <em>more</em> than just feeling temporary relief.</p>
+          <p style="margin-bottom:.4em;"><strong>You want:</strong></p>
+          <ul class="eb-list eb-arrow">
+            <li>To deeply shift the needle on the resentment, anger, sadness, rage and resignation you have been putting up with (for decades)</li>
+            <li>The freedom to set boundaries and say no, and feel aligned and empowered in that decision (no guilt or shame required!)</li>
+            <li>To feel like all your emotions are playing on the same team (not squabbling like teenagers in the background)</li>
+            <li>An emotional landscape that feels robust, ballsy and ready to take on the world (rather than rocking in the corner)</li>
+          </ul>
+          <p class="eb-subtitle-i" style="margin-top:1.4em;">You know your patterns and triggers intimately, you just need the right tools and time to finally get to the bottom of the emotional chaos.</p>
+        </div>
+      </div>
+      <div class="eb-narrow" style="margin-top:64px;">
+        <h3 style="text-align:center; font-size:1.7rem;">This is for the woman who is ready to:</h3>
+        <ul class="eb-list eb-check" style="margin-top:20px;">
+          <li>Learn how to make your emotions your allies (not your unpaid babysitting job)</li>
+          <li>Feel the mental noise drop away so you can finally hear yourself again</li>
+          <li>Feel your brain stop hurting and your intuition start talking</li>
+          <li>Unclench your nervous system and remember that peaceful, calm version of yourself (underneath the stress, overwhelm and emotional exhaustion)</li>
+          <li>Set your buried emotions free (what sweet relief) so they can work their magic for you</li>
+        </ul>
+        <p class="eb-subtitle" style="text-align:center; margin-top:2.2em; font-weight:500; color:var(--blue-deep);">Stop wasting energy fighting your emotions and start putting them to work. They were never meant to be a burden &mdash; they are meant to be your <em>energetic fuel</em>.</p>
+        <p style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--blue-deep); font-style:italic;">You're here because you're <em>ready for more</em>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="eb-soft">
+    <div class="eb-wrap">
+      <div class="eb-narrow" style="margin-bottom:48px;">
+        <p class="eb-subtitle" style="text-align:center; margin:0;">You're a grown-ass woman, have some emotional IQ and have done talk therapy, but you still don't know how to deal with the simmering fire in your belly when your boundaries are crossed. In fact, you don't know 100% <em>when</em> your boundaries are crossed.</p>
+      </div>
+      <div class="eb-split eb-flip eb-split-tall">
+        <div>
+          <p>You speak your truth and tell people how you feel, but your jaw (and butthole) is clenching most of the day, and no amount of physio or chiro shifts it completely.</p>
+          <p>Your mental capacity to work out the tangled, complex ball of emotions has hit the ceiling (or roof, emotionally).</p>
+          <h3 style="margin-top:1.4em; font-size:1.7rem;">You <em>still</em> don't know why your body feels&hellip;</h3>
+          <ul class="eb-list eb-arrow" style="margin-top:14px;">
+            <li>Like there is a volcano about to erupt in your belly when you come off a phone call with your sibling</li>
+            <li>Why you get a lump in your throat when you swallow what you were about to say (for the 1000th time)</li>
+            <li>It's full system go, 24/7. The dog, the kids, the endless list. You emotionally regulate your household&hellip; but never yourself, and that pays dividends you don't want</li>
+            <li>There's no space to check in with your own emotions, let alone how your body feels</li>
+            <li>You've done the talking. The books. The stretching, maybe the treatments. And still the tension sits there, exactly where it always has</li>
+          </ul>
+          <p style="margin-top:1.6em; font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--blue-deep);">The reason talking hasn't shifted it is that tension isn't born in your thoughts. It <em>started in your body</em>.</p>
+        </div>
+        <img src="photos/photo2.png" alt="Hridaya">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <img class="eb-icon-bg eb-icon-center" src="icons/moon_rays_gold_subtle.png" alt="" style="width:440px;">
+    <div class="eb-wrap">
+      <div class="eb-split eb-flip">
+        <div>
+          <h2>Do you experience&hellip;</h2>
+          <ul class="eb-list" style="margin-top:20px;">
+            <li>Looping thoughts and a mind that won't switch off</li>
+            <li>Waking in the night, already worrying about tomorrow</li>
+            <li>Tightness in the jaw, shoulders and chest that nothing has shifted</li>
+            <li>A simmering frustration from holding it all, with nowhere to put it, except at the bottom of a wine bottle, a block of chocolate or some dark and dusty corner of your body (that is crowded with all the other emotions)</li>
+            <li>Emotionally reactive, or numbed out completely</li>
+          </ul>
+          <p class="eb-subtitle" style="margin-top:1.6em; font-weight:500; color:var(--blue-deep);">You're not broken, and you're not failing. Your nervous system is simply <em>maxed out</em>.</p>
+        </div>
+        <img src="photos/photo3.jpg" alt="Hridaya"> 
+      </div>
+    </div>
+  </section>
+
+  <section class="eb-soft">
+    <div class="eb-narrow" style="text-align:center;">
+      <h2>It's time to build the nervous system that supports the 2nd half of your life &mdash; with you being the <em>star act</em></h2>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.7rem; color:var(--blue); margin:1.2em 0;">Emotionally Bulletproof is where that begins.</p>
+      <p class="eb-subtitle">The Emotionally Bulletproof program is a deep 1:1, high-value Breathwork and somatic container combined with my signature Home Breathwork Method, to empower you to take healing into your hands well beyond the 9 weeks.</p>
+      <p class="eb-subtitle"><strong>You'll learn how to transform your emotions like a boss and support your nervous system at the same time.</strong></p>
+      <p class="eb-subtitle">This program is a proven path to <strong>evicting years of emotional baggage and body tension that's been squatting rent-free in your nervous system</strong>.</p>
+    </div>
+  </section>
+
+  <section class="eb-method">
+    <div class="eb-wrap">
+      <p class="eb-eyebrow" style="font-size:.95rem; letter-spacing:.16em;">The Genius Behind the Transformation</p>
+      <h2 style="text-align:center;">The Emotionally Bulletproof Method&trade;</h2>
+      <p class="eb-lead">Three forces, working together &mdash; the same way your breath, your body and your mind are meant to.</p>
+      <svg class="eb-venn" viewBox="0 0 520 430" role="img" aria-label="Venn diagram: Breath, Body and Mastery overlapping to create the Emotionally Bulletproof Method">
+        <circle cx="260" cy="150" r="128"/>
+        <circle cx="188" cy="272" r="128"/>
+        <circle cx="332" cy="272" r="128"/>
+        <text class="vkick"  x="260" y="80"  text-anchor="middle">The Bridge</text>
+        <text class="vlabel" x="260" y="108" text-anchor="middle">Breath</text>
+        <text class="vkick"  x="150" y="322" text-anchor="middle">The Map</text>
+        <text class="vlabel" x="150" y="350" text-anchor="middle">Body</text>
+        <text class="vkick"  x="370" y="322" text-anchor="middle">The Tools</text>
+        <text class="vlabel" x="370" y="350" text-anchor="middle">Mastery</text>
+        <text class="vcenter" x="260" y="228" text-anchor="middle">EMOTIONALLY</text>
+        <text class="vcenter" x="260" y="244" text-anchor="middle">BULLETPROOF</text>
+      </svg>
+      <div class="eb-venn-legend">
+        <div>
+          <span class="eb-kicker">01 &middot; Breath</span>
+          <p>Conscious connected breathing drops you out of your busy mind and into the wisdom and intelligence of the body &mdash; where the long-lasting shifts actually happen.</p>
+        </div>
+        <div>
+          <span class="eb-kicker">02 &middot; Body</span>
+          <p>Diagnose your nervous system state and release the 7 Belts of Tension where emotion gets stored &mdash; the tension talking never reached, because it never started in your thoughts.</p>
+        </div>
+        <div>
+          <span class="eb-kicker">03 &middot; Mastery</span>
+          <p>My signature Home Breathwork Method puts the practice in your own hands, so you can run your own transformational journeys &mdash; for life, well beyond the 9 weeks.</p>
+        </div>
+      </div>
+      <p class="eb-triad-note">Felt. Acknowledged. Expressed. <em>That's</em> when your emotions become fuel.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="eb-wrap">
+      <h2>The Elements</h2>
+      <p class="eb-lead">The 6 Elements of the Biodynamic Breathwork and Trauma Release System (BBTRS&reg;)</p>
+      <div class="eb-elements">
+        <div class="eb-element">
+          <div class="eb-circle"><span>Breath</span></div>
+          <p>The breath is the primary tool, and we use conscious connected breathing to bridge your mind, awareness and body.</p>
+        </div>
+        <div class="eb-element">
+          <div class="eb-circle"><span>Movement</span></div>
+          <p>Movement and breath are forever married to each other. Movement allows the energy of the breath to flow throughout the body and releases stress and tension.</p>
+        </div>
+        <div class="eb-element">
+          <div class="eb-circle"><span>Sound</span></div>
+          <p>Your own voice is an instrument and can be used as sonic vibration to shift deeper tension and tightness.</p>
+        </div>
+        <div class="eb-element">
+          <div class="eb-circle"><span>Touch</span></div>
+          <p>Self-touch and bodywork during online sessions connect your own healing hands with your body, and unlock areas that need deeper exploration.</p>
+        </div>
+        <div class="eb-element">
+          <div class="eb-circle"><span>Conscious Emotional Expression</span></div>
+          <p>With the combination of the other four elements, emotion stored within the tension may arise as it is released.</p>
+        </div>
+        <div class="eb-element">
+          <div class="eb-circle"><span>Meditation</span></div>
+          <p>Using conscious connected breathing, we gently unwind from the grip of the mind and our consciousness can awaken. This is where your wisdom and intuition live, and where the deeper transformation and healing occurs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="eb-soft">
+    <div class="eb-wrap">
+      <h2>The System</h2>
+      <p class="eb-lead">The 7 Belts of Tension</p>
+      <div class="eb-narrow" style="text-align:center;">
+        <p>Our tension has an emotional, mental and physical component. The longer the stress, the more embedded in our system it becomes.</p>
+      </div>
+      <img class="eb-graphic" src="photos/seven_belts.png" alt="The 7 Belts of Tension: Ocular, Oral, Cervical, Thoracic, Diaphragmatic, Abdominal and Pelvic belts mapped onto the body">
+
+      <div class="eb-narrow" style="margin-top:40px;">
+        <p class="eb-subtitle" style="text-align:center;">Like a ball of tangled wool, we sometimes don't know where to begin. The great news: there is a framework and system that begins at the heart of the solution &mdash; the intelligence of the breath, the nervous system and your body. It knows how it got stuck, and it will find its way out too.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eb-narrow">
+      <h2>Self Mastery</h2>
+      <p class="eb-lead">Signature Home Breathwork Method&trade;</p>
+      <p>Armed with experience, knowledge and tools, my signature Home Breathwork Method puts the practice in your own hands. That's where the magic happens &mdash; self-care that genuinely changes how you feel from the inside out. Because you have a PhD-level understanding of your own shit, you just need a helping hand.</p>
+      <h3 style="margin-top:1.6em; font-size:1.7rem;">You'll master:</h3>
+      <ul class="eb-list eb-arrow" style="margin-top:14px;">
+        <li><strong>Diagnosing your nervous system state</strong> and learning how to remedy it with my library of somatic meditations. Because &ldquo;Holy hell, I just got a promotion!&rdquo; needs something different to &ldquo;I feel so disconnected from my husband lately&rdquo;.</li>
+        <li><strong>Transforming stuck, heavy, intergenerational-trauma-kind-of-emotions.</strong> The mind is terrified by it. The body is craving it. The breath is the bridge between. You will be transformed by it.</li>
+        <li><strong>Learning to un-code your specific stress</strong> using the language of the body.</li>
+        <li><strong>Discovering the 3 types of breathing patterns</strong> so you can intentionally create the Breathwork session that your body and monthly cycle needs (because women are built differently!).</li>
+        <li><strong>Diffusing intense emotions in under 5 minutes.</strong> Because when emotions hit you hard, you need to immediately diffuse the bomb (so you can pick up your kids from school or jump on a Zoom call with your boss).</li>
+        <li><strong>Re-training your nervous system</strong> to take small sips of big emotions and stress (and not get emotionally flooded or tapped out), which builds nervous system elasticity and resilience for long-term change.</li>
+      </ul>
+      <p class="eb-subtitle" style="margin-top:2em; text-align:center; color:var(--blue-deep);">Once you truly integrate the arrested, ignored or repressed energy of emotions, they become your greatest asset to fuel the rest of your life.</p>
+    </div>
+  </section>
+
+  <section class="eb-soft">
+    <img class="eb-icon-bg" src="icons/flower_of_life_deepblue_subtle.png" alt="" style="width:460px; right:-120px; top:40px;">
+    <div class="eb-wrap">
+      <h2>Inside you get it all&hellip;</h2>
+      <div class="eb-incl">
+        <div class="eb-incl-item"><div class="eb-num">01</div><p><strong>A Clarity Call</strong> to map your personalised 9-week program. <a href="ACUITY_AUDIT_CALL_URL" style="color:var(--blue);">Book here</a>.</p></div>
+        <div class="eb-incl-item"><div class="eb-num">02</div><p><strong>6 x weekly 2-hour Breathwork sessions</strong> that effortlessly drop you from your busy mind into the wisdom and intelligence of the body &mdash; which is where the long-lasting healing shifts happen.</p></div>
+        <div class="eb-incl-item"><div class="eb-num">03</div><p><strong>3 x Home Breathwork Method sessions</strong>, in the comfort of your own home. This is where the rubber hits the road and you become the centrepiece of your shifts.</p></div>
+        <div class="eb-incl-item"><div class="eb-num">04</div><p><strong>Journal prompts and emotional gym sessions</strong> that are insightful and bring the real-life change you are craving.</p></div>
+        <div class="eb-incl-item"><div class="eb-num">05</div><p><strong>Real-time feedback</strong>, guidance and support on your sessions, so you can make the real-life change you have been craving.</p></div>
+        <div class="eb-incl-item"><div class="eb-num">06</div><p><strong>My 20+ years of experience</strong> in yoga, meditation and breathwork at your service, <em>every day, during the 9-week program</em>.</p></div>
+        <div class="eb-incl-item"><div class="eb-num">07</div><p><strong>A video vault of somatic meditations</strong> so you can diagnose your nervous system and give it the medicine it needs.</p></div>
+        <div class="eb-incl-item"><div class="eb-num">08</div><p><strong>Free access</strong> to my monthly Online Community Breathwork sessions.</p></div>
+        <div class="eb-incl-item"><div class="eb-num">09</div><p><strong>Discounted Breathwork sessions</strong> after our 9 weeks together, for whenever you need a tune-up!</p></div>
+      </div>
+
+      <div class="eb-narrow" style="margin-top:64px;">
+        <h3 style="text-align:center; font-size:1.8rem;">Bonus FREE inclusions</h3>
+        <ul class="eb-list eb-check" style="margin-top:20px;">
+          <li><strong>Settle and Sense</strong> &mdash; a 10-minute practice to de-escalate intense emotions</li>
+          <li><strong>14 alternative postures</strong> to sitting cross-legged, for ease in your meditation practice</li>
+          <li><strong>The 30 best journal prompts</strong> for when you feel stuck or anxious</li>
+          <li><strong>Free access to Blissed Sleep</strong> 7 nights a week &mdash; 7 Yoga Nidra body relaxation practices so you get the best sleep of your life (valued at $99)</li>
+        </ul>
+      </div>
+
+      <div class="eb-offer-card">
+        <p class="eb-value">Valued at over $3,000 &mdash; yours from just $133 per week</p>
+        <div class="eb-price-row">
+          <div class="eb-price">
+            <div class="eb-now">$997</div>
+            <div class="eb-sub">Pay in full (AUD)</div>
+          </div>
+          <div class="eb-price">
+            <div class="eb-now">$133</div>
+            <div class="eb-sub">per week, 9 weekly payments</div>
+          </div>
+        </div>
+        <a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book Your Clarity Call</a>
+        <p class="eb-fine">Sessions are held over Zoom. Everything is yours to keep and practise for life.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="eb-deep">
+    <div class="eb-narrow">
+      <h2>What my clients walk away with&hellip;</h2>
+      <ul class="eb-list eb-check" style="margin-top:32px;">
+        <li>Clear-headed, emotionally resilient, and back in the driver's seat of their own life, decisions, body and emotions</li>
+        <li>Turning emotional traffic jams into movement, momentum, and energy you can actually use (like quitting that soul-numbing job and starting that passion project)</li>
+        <li>Transforming stress, anger, grief, and frustration from energy-draining burdens into fuel for meaningful action</li>
+        <li>Knowing, without a doubt, what a calm, regulated baseline feels like (because most of us have forgotten)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="eb-narrow">
+      <h2>This is for you if&hellip;</h2>
+      <ul class="eb-list eb-arrow" style="margin-top:32px;">
+        <li>You're a woman in midlife, questioning everything and sick of the status quo of overwhelm, energy-draining emotions and constant tension</li>
+        <li>You're self-aware and in an intimate relationship with all your triggers and patterns, but can't see the roadmap to meaningful change</li>
+        <li>You're sick of emotional meltdowns without any resolution or change &mdash; you're here for lasting shifts</li>
+        <li>You're not here to &ldquo;feel temporary relief&rdquo;&hellip; you want depth, sustainability and tools that last well beyond a program</li>
+        <li>You're ready to <em>stop</em> emotionally winging it and start operating like a queen of her emotional domain</li>
+      </ul>
+      <p class="eb-subtitle" style="text-align:center; margin-top:2.4em; font-weight:500; color:var(--blue-deep);">Take all that emotional energy you've been spending on coping and invest it somewhere that actually pays dividends.</p>
+    </div>
+  </section>
+
+  <section class="eb-soft">
+    <div class="eb-wrap">
+      <h2 style="text-align:center; margin-bottom:1.4em;">What clients say</h2>
+      <div class="eb-testi-grid">
+        <figure class="eb-testi-card">
+          <blockquote>I was relatively new to breathwork and didn't know what to expect, but right from the first session Hridaya made me feel at ease, and I experienced very deep breakthroughs and insights from the get-go. I guess I never truly knew how to breathe before Hridaya showed me.</blockquote>
+          <figcaption>
+            <img src="testi_pascale.jpg" alt="Pascale Hennessy">
+            <div><div class="eb-testi-name">Pascale Hennessy</div><div class="eb-testi-role">Wife, Mother, Businesswoman</div></div>
+          </figcaption>
+        </figure>
+        <figure class="eb-testi-card">
+          <blockquote>Hridaya is a great guide to BBTRS and inner trauma work. Her approach is intuitive, present, playful, wise and fully attentive, so it was very easy to trust and let go into the process. It was deep work, but it unfolded easily and gently, and the effects have lasted.</blockquote>
+          <figcaption>
+            <img src="testi_bernard.jpg" alt="Bernard Steeds">
+            <div><div class="eb-testi-name">Bernard Steeds</div><div class="eb-testi-role">Writer</div></div>
+          </figcaption>
+        </figure>
+        <figure class="eb-testi-card">
+          <blockquote>Hridaya is an outstanding breathwork facilitator. She creates a safe, supportive and loving space in which to unravel and then rebuild myself, ready for life. Each time there's a profound shift, a letting go, and a reinvigorated energy for life.</blockquote>
+          <figcaption>
+            <img src="testi_joanna.jpg" alt="Joanna Moore">
+            <div><div class="eb-testi-name">Joanna Moore</div><div class="eb-testi-role">Mother, Gardener &amp; Writer</div></div>
+          </figcaption>
+        </figure>
+        <figure class="eb-testi-card">
+          <blockquote>If you're considering booking with Hridaya, I would really encourage you to go for it. Her ability to make me feel safe, hold the space and intuitively guide me to some fascinating results was priceless. I don't think I would have unlocked some of my recent healing without her.</blockquote>
+          <figcaption>
+            <img src="testi_micci.jpg" alt="Micci Gorrod">
+            <div><div class="eb-testi-name">Micci Gorrod</div><div class="eb-testi-role">Founder of Conscious Creative, Mother</div></div>
+          </figcaption>
+        </figure>
+        <figure class="eb-testi-card">
+          <blockquote>I am very new to breathwork. I had a course of 8 sessions with Hridaya and was amazed after every session how grounded, peaceful and healing they were. I was surprised how effective it was even over Zoom, and I've significantly opened up and let go of a lot of stress.</blockquote>
+          <figcaption>
+            <img src="testi_nick.jpg" alt="Nick Lambroupoulos">
+            <div><div class="eb-testi-name">Nick Lambroupoulos</div><div class="eb-testi-role">IT Guy, Meditator, Father</div></div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eb-wrap">
+      <h2>Here's how we work together&hellip;</h2>
+      <div class="eb-steps">
+        <div class="eb-step">
+          <div class="eb-stepnum">Step 1</div>
+          <h3>Book a Clarity Call</h3>
+          <p>Apply with an easy, no-pressure chat with me, Hridaya, to see if we're a good fit.</p>
+          <a href="ACUITY_AUDIT_CALL_URL" class="eb-btn" style="margin-top:10px;">Book Your Call</a>
+        </div>
+        <div class="eb-step">
+          <div class="eb-stepnum">Step 2</div>
+          <h3>That's it!</h3>
+          <p>If I can't provide you with a clear, tangible solution to your current problems on the call, then we don't work together (that's it!).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="eb-soft">
+    <img class="eb-icon-bg" src="icons/moon_rays_gold_subtle.png" alt="" style="width:360px; right:-70px; bottom:-50px;">
+    <div class="eb-narrow">
+      <h2>Here is what you're thinking&hellip;</h2>
+      <div class="eb-faq">
+        <details>
+          <summary>What type of Breathwork do you use?</summary>
+          <div class="eb-faq-a"><p>The Breathwork style is called conscious connected breathing, and I am an Advanced Practitioner with Biodynamic Breathwork and Trauma Release System (BBTRS). This is a trauma-informed Breathwork training organisation that is well respected in the Breathwork community. As with yoga, there are many different styles and different ways of sequencing and teaching &mdash; however, downward dog is still downward dog! It is similar in the Breathwork world: there are lots of different Breathwork modalities that all use conscious connected breathing, with different approaches, levels of trauma-informed training and teaching styles.</p><p>Safety and building your nervous system capacity are the most important aspects of BBTRS.</p></div>
+        </details>
+        <details>
+          <summary>Is this like Wim Hof?</summary>
+          <div class="eb-faq-a"><p>No, this is not like Wim Hof, though you may experience similar benefits. Conscious connected breathing is a medicine journey (with the medicine being your breath). The journey typically lasts for 45 minutes to 1 hour, but don't worry, you are not breathing in this way the whole time! In that time, you cycle through active (sympathetic nervous system) and passive (parasympathetic nervous system) breathing. Wim Hof is generally 15&ndash;20 minutes and includes breath holds.</p></div>
+        </details>
+        <details>
+          <summary>I'm new to Breathwork and nervous that it will be too much for me.</summary>
+          <div class="eb-faq-a"><p>It is completely natural to feel nervous about Breathwork. Feeling nervous or excited is often a signal your body is making to get your attention, because this is important! It can be uncomfortable, but it is natural. I will be supporting you through every step of the process, and once you have your first session, you will know what to expect for next time.</p><p>You may have seen (or heard about) some people in a Breathwork session shaking, moving or crying on social media. This is all a natural part of breathwork. As you breathe deeper, you are bringing more energy into your body. This energy may find stress or tension that has been locked in your body over a long period of time. Because your body is so intelligent, it will find the best way to release that tension and stress, in the form of shaking, movement, crying, laughing or anything else that naturally arises! It's very freeing and liberating.</p></div>
+        </details>
+        <details>
+          <summary>I don't know if I am ready to face my trauma.</summary>
+          <div class="eb-faq-a"><p>I say this with love: your mind will never be ready to face your trauma. That is what it is designed to do &mdash; keep you safe and comfortable. But your body has been keeping stress, tension and trauma locked away (and suffering the consequences), in preparation for when you finally look into those dark and dusty corners. You have just needed the right tools and guidance.</p><p>If you are reading this, there is a part of you that is ready to face what's there. And from my experience of facing my own trauma? The fear of facing it is much greater than the actual experience of facing it. Facing it is where the relief and healing happens. A huge weight is lifted. Don't miss out on that part! That's the good part.</p></div>
+        </details>
+        <details>
+          <summary>I am scared my patterns are going to prevent me from making the deep shifts required.</summary>
+          <div class="eb-faq-a"><p>The great thing is that we go at the pace of your body and nervous system. Your body sets the agenda (not me or your mind). You are like an onion with layers; we go layer by layer. If you are willing and committed, the breath will take you exactly where you need to go, at exactly the right time. The deeper shifts happen naturally as you accumulate experience and nervous system capacity over the 9-week program.</p></div>
+        </details>
+        <details>
+          <summary>I have a medical condition. Is this right for me?</summary>
+          <div class="eb-faq-a"><p>There are contraindications to Breathwork, which means Breathwork is not for everyone. This includes severe asthma, mental illness (bipolar disorder, severe depression and schizophrenia), severe PTSD or trauma, history of strokes, heart disease, detached retina, glaucoma, epilepsy or pregnancy. If you are unsure, you can book a Clarity Call with me to see if we are the right fit.</p></div>
+        </details>
+      </div>
+      <div style="text-align:center; margin-top:48px;"><a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book Your Clarity Call</a></div>
+    </div>
+  </section>
+
+  <section class="eb-carousel" style="padding:48px 0;">
+    <div class="eb-track">
+      <img src="photos/carousel1.jpg" alt="Hridaya teaching a group breathwork session">
+      <img src="photos/carousel2.jpg" alt="Hridaya guiding a 1:1 breathwork session">
+      <img src="photos/carousel3.jpg" alt="Group meditation session with Hridaya">
+      <img src="photos/carousel4.jpg" alt="Hridaya supporting a client in session">
+      <img src="photos/carousel1.jpg" alt="">
+      <img src="photos/carousel2.jpg" alt="">
+      <img src="photos/carousel3.jpg" alt="">
+      <img src="photos/carousel4.jpg" alt="">
+    </div>
+  </section>
+
+  <script>
+  (function(){
+    var eb = document.getElementById('eb');
+    if(!eb || !('IntersectionObserver' in window)) return;
+    if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var blocks = [];
+    function add(el, delay, imgWipe){
+      if(!el) return;
+      el.classList.add(imgWipe ? 'eb-reveal-img' : 'eb-reveal');
+      if(el.classList.contains('eb-reveal-img')) el.classList.add('eb-reveal');
+      if(delay) el.style.transitionDelay = delay.toFixed(2) + 's';
+      blocks.push(el);
+    }
+
+    // Hero content: fade-up on load, staggered
+    var hero = eb.querySelector('.eb-hero .eb-wrap');
+    if(hero){ Array.prototype.slice.call(hero.children).forEach(function(c,i){ add(c, i*0.12); }); }
+
+    // Two-column splits: text block fades up, photo gets a soft reveal wipe
+    eb.querySelectorAll('.eb-split').forEach(function(split){
+      Array.prototype.slice.call(split.children).forEach(function(child){
+        if(child.tagName === 'IMG') add(child, 0.05, true);
+        else add(child, 0);
+      });
+    });
+
+    // Centered narrow text blocks (intros, "you'll master", bridge)
+    eb.querySelectorAll('section > .eb-wrap > .eb-narrow, section > .eb-narrow').forEach(function(el){ add(el, 0); });
+
+    // Grids: stagger the children
+    ['.eb-venn-legend', '.eb-elements', '.eb-incl', '.eb-steps', '.eb-testi-grid'].forEach(function(sel){
+      eb.querySelectorAll(sel).forEach(function(grid){
+        Array.prototype.slice.call(grid.children).forEach(function(child,i){ add(child, i*0.1); });
+      });
+    });
+
+    // Section headings / leads that sit directly in an eb-wrap (method, offer, faq)
+    eb.querySelectorAll('.eb-method .eb-eyebrow, .eb-method h2, .eb-method .eb-lead, .eb-venn, .eb-method .eb-triad-note, .eb-offer-card, .eb-faq details').forEach(function(el){ add(el, 0); });
+
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('eb-in'); io.unobserve(e.target); }
+      });
+    }, { threshold:0.12, rootMargin:'0px 0px -7% 0px' });
+
+    blocks.forEach(function(el){ io.observe(el); });
+  })();
+  </script>
+
+</div>
