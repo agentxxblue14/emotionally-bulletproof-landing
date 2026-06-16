@@ -162,7 +162,10 @@
     #eb .eb-faq summary { padding-left:46px; background-image:url('icons/hands_sunburst_gold_subtle.png'); background-repeat:no-repeat; background-position:left 2px center; background-size:30px 30px; }
 
     /* visible centred icon motif above a section's text, to pull the eye to the words */
-    #eb .eb-icon-top { display:block; width:118px; height:auto; margin:0 auto 26px; opacity:.95; }
+    /* large faded icon watermark sitting CENTRED BEHIND a block of text */
+    #eb .eb-behind { position:relative; }
+    #eb .eb-icon-behind { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:min(640px,108%); height:auto; opacity:.13; z-index:0; pointer-events:none; user-select:none; }
+    #eb .eb-behind > *:not(.eb-icon-behind) { position:relative; z-index:1; }
 
     /* full-width centred content block (fills the whole section, not just one column) */
     #eb .eb-block { max-width:900px; margin:0 auto; }
@@ -198,8 +201,8 @@
 
   <section>
     <div class="eb-wrap">
-      <img class="eb-icon-top" src="icons/hands_sunburst_blue_full.png" alt="">
-      <div class="eb-block">
+      <div class="eb-block eb-behind">
+        <img class="eb-icon-behind" src="icons/hands_sunburst_blue_full.png" alt="">
         <h2>This is for the woman who is done with emotional compromise</h2>
         <p style="text-align:center; font-size:1.12rem;">You want <em>more</em> than just feeling temporary relief.</p>
         <p style="text-align:center; margin:1.6em 0 .4em;"><strong>You want:</strong></p>
@@ -260,9 +263,9 @@
 
   <section>
     <div class="eb-wrap">
-      <img class="eb-icon-top" src="icons/moon_rays_blue_full.png" alt="">
       <div class="eb-split eb-flip">
-        <div>
+        <div class="eb-behind">
+          <img class="eb-icon-behind" src="icons/moon_rays_blue_full.png" alt="">
           <h2>Do you experience&hellip;</h2>
           <ul class="eb-list" style="margin-top:20px;">
             <li>Looping thoughts and a mind that won't switch off</li>
