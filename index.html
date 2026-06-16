@@ -161,6 +161,27 @@
     /* FAQ icon on the LEFT of each question, touching the text */
     #eb .eb-faq summary { padding-left:46px; background-image:url('icons/hands_sunburst_gold_subtle.png'); background-repeat:no-repeat; background-position:left 2px center; background-size:30px 30px; }
 
+    /* visible centred icon motif above a section's text, to pull the eye to the words */
+    #eb .eb-icon-top { display:block; width:64px; height:auto; margin:0 auto 24px; opacity:.92; }
+
+    /* full-width centred content block (fills the whole section, not just one column) */
+    #eb .eb-block { max-width:900px; margin:0 auto; }
+    #eb .eb-block > h2, #eb .eb-block > h3 { text-align:center; }
+    #eb .eb-portrait { display:block; width:100%; max-width:430px; margin:46px auto; border-radius:16px; box-shadow:0 30px 60px -34px rgba(29,68,89,.5); }
+
+    /* centred call-to-action row */
+    #eb .eb-cta { text-align:center; margin-top:40px; }
+    #eb .eb-method .eb-cta a, #eb .eb-deep .eb-cta a { background:var(--gold); color:#1d2f3a !important; }
+    #eb .eb-method .eb-cta a:hover, #eb .eb-deep .eb-cta a:hover { background:#d9bd86; }
+
+    /* The Elements recoloured for the dark Method band — gold rings, white type */
+    #eb .eb-method-divider { width:64px; height:1px; background:var(--gold); margin:54px auto; opacity:.55; }
+    #eb .eb-method .eb-elements-title { text-align:center; margin:0 0 .2em; }
+    #eb .eb-method .eb-element .eb-circle { border-color:var(--gold); background:rgba(231,211,168,.08); }
+    #eb .eb-method .eb-element:hover .eb-circle { background:rgba(231,211,168,.17); }
+    #eb .eb-method .eb-element .eb-circle span { color:#fff; }
+    #eb .eb-method .eb-element p { color:#d3e2ec; }
+
     @media(max-width:820px){
       #eb .eb-elements { grid-template-columns:1fr 1fr; gap:36px 24px; max-width:420px; }
     }
@@ -168,34 +189,35 @@
 
   <section class="eb-hero" style="min-height:88vh; display:flex; align-items:center; text-align:center; background:linear-gradient(rgba(29,68,89,.42),rgba(29,68,89,.6)), radial-gradient(ellipse 70% 55% at 50% 45%, rgba(0,0,0,.28), transparent 70%), url('photos/hero.png') center 35%/cover no-repeat;">
     <div class="eb-wrap">
-      <p class="eb-eyebrow" style="color:#e7d3a8; font-size:.92rem; letter-spacing:.14em;">Because your emotions were never meant to be suppressed&mdash;they were meant to be recruited</p>
+      <p class="eb-eyebrow" style="color:#e7d3a8; font-size:clamp(1.05rem,2vw,1.45rem); letter-spacing:.08em; line-height:1.4; max-width:760px; margin:0 auto 1.2em;">Because your emotions were never meant to be suppressed&mdash;they were meant to be recruited</p>
       <h1 style="color:#fff; font-size:clamp(2.6rem,6vw,4.6rem); margin-bottom:.3em;">Emotionally Bulletproof</h1>
-      <p style="color:#f3f7f9; font-size:clamp(1.2rem,2.3vw,1.5rem); max-width:700px; margin:0 auto 2em;">A 9-week 1:1 online program to master your emotional world, build unshakable resilience, and turn your emotions into a source of power, purpose, and momentum.</p>
-      <a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Begin the Journey</a>
+      <p style="color:#f3f7f9; font-size:clamp(1.2rem,2.3vw,1.5rem); max-width:720px; margin:0 auto 2em;">A 9-week 1:1 online program to take your messy, unresolved emotional world and transform it into your power, purpose, and momentum &mdash; without feeling gaslit, a trainwreck or a failure.</p>
+      <a href="ACUITY_AUDIT_CALL_URL" class="eb-btn" style="font-size:1.15rem; padding:19px 48px;">Begin the Journey</a>
     </div>
   </section>
 
   <section>
-    <img class="eb-icon-bg eb-icon-center" src="icons/hands_sunburst_blue_subtle.png" alt="" style="width:480px;">
     <div class="eb-wrap">
-      <div class="eb-split">
-        <img src="photos/photo1.jpg" alt="Hridaya">
-        <div>
-          <h2>This is for the woman who is done with emotional compromise</h2>
-          <p>You want <em>more</em> than just feeling temporary relief.</p>
-          <p style="margin-bottom:.4em;"><strong>You want:</strong></p>
-          <ul class="eb-list eb-arrow">
-            <li>To deeply shift the needle on the resentment, anger, sadness, rage and resignation you have been putting up with (for decades)</li>
-            <li>The freedom to set boundaries and say no, and feel aligned and empowered in that decision (no guilt or shame required!)</li>
-            <li>To feel like all your emotions are playing on the same team (not squabbling like teenagers in the background)</li>
-            <li>An emotional landscape that feels robust, ballsy and ready to take on the world (rather than rocking in the corner)</li>
-          </ul>
-          <p class="eb-subtitle-i" style="margin-top:1.4em;">You know your patterns and triggers intimately, you just need the right tools and time to finally get to the bottom of the emotional chaos.</p>
-        </div>
+      <img class="eb-icon-top" src="icons/hands_sunburst_gold_subtle.png" alt="">
+      <div class="eb-block">
+        <h2>This is for the woman who is done with emotional compromise</h2>
+        <p style="text-align:center; font-size:1.12rem;">You want <em>more</em> than just feeling temporary relief.</p>
+        <p style="text-align:center; margin:1.6em 0 .4em;"><strong>You want:</strong></p>
+        <ul class="eb-list eb-arrow" style="max-width:720px; margin:0 auto;">
+          <li>To deeply shift the needle on the resentment, anger, sadness, rage and resignation you have been putting up with (for decades)</li>
+          <li>The freedom to set boundaries and say no, and feel aligned and empowered in that decision (no guilt or shame required!)</li>
+          <li>To feel like all your emotions are playing on the same team (not squabbling like teenagers in the background)</li>
+          <li>An emotional landscape that feels robust, ballsy and ready to take on the world (rather than rocking in the corner)</li>
+        </ul>
       </div>
-      <div class="eb-narrow" style="margin-top:64px;">
-        <h3 style="text-align:center; font-size:1.7rem;">This is for the woman who is ready to:</h3>
-        <ul class="eb-list eb-check" style="margin-top:20px;">
+
+      <img class="eb-portrait" src="photos/photo1.jpg" alt="Hridaya">
+
+      <div class="eb-block">
+        <p class="eb-subtitle-i" style="text-align:center;">You know your patterns and triggers intimately, you just need the right tools and time to finally get to the bottom of the emotional chaos.</p>
+
+        <h3 style="text-align:center; font-size:1.7rem; margin-top:2em;">This is for the woman who is ready to:</h3>
+        <ul class="eb-list eb-check" style="max-width:720px; margin:20px auto 0;">
           <li>Learn how to make your emotions your allies (not your unpaid babysitting job)</li>
           <li>Feel the mental noise drop away so you can finally hear yourself again</li>
           <li>Feel your brain stop hurting and your intuition start talking</li>
@@ -203,7 +225,8 @@
           <li>Set your buried emotions free (what sweet relief) so they can work their magic for you</li>
         </ul>
         <p class="eb-subtitle" style="text-align:center; margin-top:2.2em; font-weight:500; color:var(--blue-deep);">Stop wasting energy fighting your emotions and start putting them to work. They were never meant to be a burden &mdash; they are meant to be your <em>energetic fuel</em>.</p>
-        <p style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--blue-deep); font-style:italic;">You're here because you're <em>ready for more</em>.</p>
+        <div class="eb-cta"><a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book a Clarity Call</a></div>
+        <p style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:1.6rem; color:var(--blue-deep); font-style:italic; margin-top:1.6em;">You're here because you're <em>ready for more</em>.</p>
       </div>
     </div>
   </section>
@@ -225,16 +248,19 @@
             <li>There's no space to check in with your own emotions, let alone how your body feels</li>
             <li>You've done the talking. The books. The stretching, maybe the treatments. And still the tension sits there, exactly where it always has</li>
           </ul>
-          <p style="margin-top:1.6em; font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--blue-deep);">The reason talking hasn't shifted it is that tension isn't born in your thoughts. It <em>started in your body</em>.</p>
         </div>
         <img src="photos/photo2.png" alt="Hridaya">
+      </div>
+      <div class="eb-block" style="margin-top:48px;">
+        <p class="eb-subtitle-i" style="text-align:center;">The reason talking hasn't shifted it is that tension isn't born in your thoughts. It <em>started in your body</em>.</p>
+        <div class="eb-cta"><a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book a Clarity Call</a></div>
       </div>
     </div>
   </section>
 
   <section>
-    <img class="eb-icon-bg eb-icon-center" src="icons/moon_rays_gold_subtle.png" alt="" style="width:440px;">
     <div class="eb-wrap">
+      <img class="eb-icon-top" src="icons/moon_rays_gold_subtle.png" alt="">
       <div class="eb-split eb-flip">
         <div>
           <h2>Do you experience&hellip;</h2>
@@ -259,6 +285,7 @@
       <p class="eb-subtitle">The Emotionally Bulletproof program is a deep 1:1, high-value Breathwork and somatic container combined with my signature Home Breathwork Method, to empower you to take healing into your hands well beyond the 9 weeks.</p>
       <p class="eb-subtitle"><strong>You'll learn how to transform your emotions like a boss and support your nervous system at the same time.</strong></p>
       <p class="eb-subtitle">This program is a proven path to <strong>evicting years of emotional baggage and body tension that's been squatting rent-free in your nervous system</strong>.</p>
+      <div class="eb-cta"><a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book a Clarity Call</a></div>
     </div>
   </section>
 
@@ -266,41 +293,10 @@
     <div class="eb-wrap">
       <p class="eb-eyebrow" style="font-size:.95rem; letter-spacing:.16em;">The Genius Behind the Transformation</p>
       <h2 style="text-align:center;">The Emotionally Bulletproof Method&trade;</h2>
-      <p class="eb-lead">Three forces, working together &mdash; the same way your breath, your body and your mind are meant to.</p>
-      <svg class="eb-venn" viewBox="0 0 520 430" role="img" aria-label="Venn diagram: Breath, Body and Mastery overlapping to create the Emotionally Bulletproof Method">
-        <circle cx="260" cy="150" r="128"/>
-        <circle cx="188" cy="272" r="128"/>
-        <circle cx="332" cy="272" r="128"/>
-        <text class="vkick"  x="260" y="80"  text-anchor="middle">The Bridge</text>
-        <text class="vlabel" x="260" y="108" text-anchor="middle">Breath</text>
-        <text class="vkick"  x="150" y="322" text-anchor="middle">The Map</text>
-        <text class="vlabel" x="150" y="350" text-anchor="middle">Body</text>
-        <text class="vkick"  x="370" y="322" text-anchor="middle">The Tools</text>
-        <text class="vlabel" x="370" y="350" text-anchor="middle">Mastery</text>
-        <text class="vcenter" x="260" y="228" text-anchor="middle">EMOTIONALLY</text>
-        <text class="vcenter" x="260" y="244" text-anchor="middle">BULLETPROOF</text>
-      </svg>
-      <div class="eb-venn-legend">
-        <div>
-          <span class="eb-kicker">01 &middot; Breath</span>
-          <p>Conscious connected breathing drops you out of your busy mind and into the wisdom and intelligence of the body &mdash; where the long-lasting shifts actually happen.</p>
-        </div>
-        <div>
-          <span class="eb-kicker">02 &middot; Body</span>
-          <p>Diagnose your nervous system state and release the 7 Belts of Tension where emotion gets stored &mdash; the tension talking never reached, because it never started in your thoughts.</p>
-        </div>
-        <div>
-          <span class="eb-kicker">03 &middot; Mastery</span>
-          <p>My signature Home Breathwork Method puts the practice in your own hands, so you can run your own transformational journeys &mdash; for life, well beyond the 9 weeks.</p>
-        </div>
-      </div>
-      <p class="eb-triad-note">Felt. Acknowledged. Expressed. <em>That's</em> when your emotions become fuel.</p>
-    </div>
-  </section>
 
-  <section>
-    <div class="eb-wrap">
-      <h2>The Elements</h2>
+      <div class="eb-method-divider"></div>
+
+      <h2 class="eb-elements-title">The Elements</h2>
       <p class="eb-lead">The 6 Elements of the Biodynamic Breathwork and Trauma Release System (BBTRS&reg;)</p>
       <div class="eb-elements">
         <div class="eb-element">
@@ -341,7 +337,8 @@
       <img class="eb-graphic" src="photos/seven_belts.png" alt="The 7 Belts of Tension: Ocular, Oral, Cervical, Thoracic, Diaphragmatic, Abdominal and Pelvic belts mapped onto the body">
 
       <div class="eb-narrow" style="margin-top:40px;">
-        <p class="eb-subtitle" style="text-align:center;">Like a ball of tangled wool, we sometimes don't know where to begin. The great news: there is a framework and system that begins at the heart of the solution &mdash; the intelligence of the breath, the nervous system and your body. It knows how it got stuck, and it will find its way out too.</p>
+        <p class="eb-subtitle" style="text-align:center; font-style:italic;">Like a ball of tangled wool, we sometimes don't know where to begin. The great news: there is a framework and system that begins at the heart of the solution &mdash; the intelligence of the breath, the nervous system and your body. It knows how it got stuck, and it will find its way out too.</p>
+        <div class="eb-cta"><a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book a Clarity Call</a></div>
       </div>
     </div>
   </section>
@@ -402,7 +399,7 @@
             <div class="eb-sub">per week, 9 weekly payments</div>
           </div>
         </div>
-        <a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book Your Clarity Call</a>
+        <a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book a Clarity Call</a>
         <p class="eb-fine">Sessions are held over Zoom. Everything is yours to keep and practise for life.</p>
       </div>
     </div>
@@ -431,6 +428,7 @@
         <li>You're ready to <em>stop</em> emotionally winging it and start operating like a queen of her emotional domain</li>
       </ul>
       <p class="eb-subtitle" style="text-align:center; margin-top:2.4em; font-weight:500; color:var(--blue-deep);">Take all that emotional energy you've been spending on coping and invest it somewhere that actually pays dividends.</p>
+      <div class="eb-cta"><a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book a Clarity Call</a></div>
     </div>
   </section>
 
@@ -485,7 +483,7 @@
           <div class="eb-stepnum">Step 1</div>
           <h3>Book a Clarity Call</h3>
           <p>Apply with an easy, no-pressure chat with me, Hridaya, to see if we're a good fit.</p>
-          <a href="ACUITY_AUDIT_CALL_URL" class="eb-btn" style="margin-top:10px;">Book Your Call</a>
+          <a href="ACUITY_AUDIT_CALL_URL" class="eb-btn" style="margin-top:10px;">Book a Clarity Call</a>
         </div>
         <div class="eb-step">
           <div class="eb-stepnum">Step 2</div>
@@ -526,7 +524,7 @@
           <div class="eb-faq-a"><p>There are contraindications to Breathwork, which means Breathwork is not for everyone. This includes severe asthma, mental illness (bipolar disorder, severe depression and schizophrenia), severe PTSD or trauma, history of strokes, heart disease, detached retina, glaucoma, epilepsy or pregnancy. If you are unsure, you can book a Clarity Call with me to see if we are the right fit.</p></div>
         </details>
       </div>
-      <div style="text-align:center; margin-top:48px;"><a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book Your Clarity Call</a></div>
+      <div style="text-align:center; margin-top:48px;"><a href="ACUITY_AUDIT_CALL_URL" class="eb-btn">Book a Clarity Call</a></div>
     </div>
   </section>
 
